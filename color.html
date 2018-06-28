@@ -1,10 +1,18 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+        <meta name="veiwport" content="width=device-width"/>
         <title>color</title>
         <style>
             form{
                 background-color: #ffffff;
+                padding: 10px;
+                max-width: 350;
+                text-align: center;
+                margin: 10 auto;
+            }
+            footer{
+                text-align: center;
             }
         </style>
         <script type="text/javascript">
@@ -30,16 +38,17 @@
             h <input type="text" size="3" value="10" name="h"/>
             s <input type="text" size="3" value="10" name="s"/>
             l <input type="text" size="3" value="10" name="l"/>
-            <input type="button" value="色を変える" onclick="colorhsl();"/>
+            <input type="button" value="背景色を変える" onclick="colorhsl();"/>
         </form>
         
         <form name="rgb">
             r <input type="text" size="3" value="0" name="r"/>
             g <input type="text" size="3" value="0" name="g"/>
             b <input type="text" size="3" value="0" name="b"/>
-            <input type="button" value="色を変える" onclick="colorrgb();"/>
+            <input type="button" value="背景色を変える" onclick="colorrgb();"/>
         </form>
         
         </div>
+        <footer><p><small>&copy; Copyright 2018 KananDeltastar</small></p></footer>
     </body>
 </html>
