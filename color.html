@@ -3,11 +3,8 @@
         <meta charset="utf-8"/>
         <title>color</title>
         <style>
-            body{
-                background-color: hsl(0, 100%, 100%);
-            }
-            .hsl{
-                background-color: "#ffffff";
+            form{
+                background-color: #ffffff;
             }
         </style>
         <script type="text/javascript">
@@ -28,18 +25,21 @@
         </script>
     </head>
     <body>
+        <div id="settings">
         <form name="hsl">
-            h<input type="text" size="3" value="10" name="h"/>
-            s<input type="text" size="3" value="10" name="s"/>
-            l<input type="text" size="3" value="10" name="l"/>
+            h <input type="text" size="3" value="10" name="h"/>
+            s <input type="text" size="3" value="10" name="s"/>
+            l <input type="text" size="3" value="10" name="l"/>
             <input type="button" value="色を変える" onclick="colorhsl();"/>
         </form>
         
         <form name="rgb">
-            r<input type="text" size="3" value="0" name="r"/>
-            g<input type="text" size="3" value="0" name="g"/>
-            b<input type="text" size="3" value="0" name="b"/>
+            r <input type="text" size="3" value="0" name="r"/>
+            g <input type="text" size="3" value="0" name="g"/>
+            b <input type="text" size="3" value="0" name="b"/>
             <input type="button" value="色を変える" onclick="colorrgb();"/>
         </form>
+        
+        </div>
     </body>
 </html>
