@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>color</title>
+        <style>
+            body{
+                background-color: hsl(0, 100%, 100%);
+            }
+        </style>
+        <script type="text/javascript">
+            function colorchange(){
+                var h = document.f.h.value;
+                var s = document.f.s.value;
+                var l = document.f.l.value;
+                var c = "hsl("+ h + ", " + s + "%, " + l +"%)";
+                document.body.style.backgroundColor = c;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f">
+            h<input type="text" size="3" value="10" name="h"/>
+            s<input type="text" size="3" value="10" name="s"/>
+            l<input type="text" size="3" value="10" name="l"/>
+            <input type="button" value="色を変える" onclick="colorchange();"/>
+        </form>
+    </body>
+</html>
