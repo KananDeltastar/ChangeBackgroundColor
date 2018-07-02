@@ -12,17 +12,28 @@
         </form>
         <div id="settings">
         <form name="hsl">
-            h <input type="text" size="3" value="10" name="h"/>
-            s <input type="text" size="3" value="10" name="s"/>
-            l <input type="text" size="3" value="10" name="l"/>
+            HSV形式<br>
+            色相 : <input type="text" size="3" value="10" name="h"/>
+            彩度 : <input type="text" size="3" value="10" name="s"/>% 
+            明度 : <input type="text" size="3" value="10" name="l"/>% 
             <input type="button" value="背景色を変える" onclick="colorhsl();"/>
+            <br>
+            色相: 0 ~ 360<br>
+            彩度: 0 ~ 100%<br>
+            明度: 0 ~ 100%
         </form>
         
         <form name="rgb">
+            RGB形式<br>
             r <input type="text" size="3" value="0" name="r"/>
             g <input type="text" size="3" value="0" name="g"/>
             b <input type="text" size="3" value="0" name="b"/>
             <input type="button" value="背景色を変える" onclick="colorrgb();"/>
+            <br>
+            r : 0 ~ 255<br>
+            g : 0 ~ 255<br>
+            b : 0 ~ 255
+            
         </form>
         
         </div>
