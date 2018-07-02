@@ -11,4 +11,13 @@ function colorrgb(){
     var b = document.rgb.b.value;
     var c = "rgb(" + r + ","+ g+ "," + b + ")"
     document.body.style.backgroundColor = c;
+    
+    document.color.rrggbb.value = "#" + toHex(r) + toHex(g) + toHex(b);
+}
+function toHex(i){
+    var n = Number(i).toString(16);
+    if(i < 16){
+        n = "0" + n;
+    }
+    return n;
 }
