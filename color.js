@@ -23,6 +23,13 @@ function colorrgb(){
     document.body.style.backgroundColor = c;
     document.color.rgb.value= c;
     document.color.rrggbb.value = "#" + toHex(r) + toHex(g) + toHex(b);
+    var h, s, l;
+    var hsv = rgbToHsv ( r, g, b );
+    h = hsv[0];
+    s = hsv[1];
+    l = hsv[2];
+    c = "hsl("+ h + ", " + s + "%, " + l +"%)";
+    document.color.hsv.value = c;    
 }
 
 function toHex(i){
@@ -81,4 +88,42 @@ function hsvToRgb(H,S,V) {
     B = Math.floor(B * 255);
 
     return [R ,G, B];
+}
+
+function rgbToHsv ( r, g, b ) {
+    r = r/255;
+    g = g/255;
+    b = b/255;
+	var max = Math.max( r, g, b ) ;
+	var min = Math.min( r, g, b ) ;
+	var diff = max - min ;
+
+	var h = 0 ;
+
+	switch( min ) {
+		case max :
+			h = 0 ;
+		break ;
+
+		case r :
+			h = (60 * ((b - g) / diff)) + 180 ;
+		break ;
+
+		case g :
+			h = (60 * ((r - b) / diff)) + 300 ;
+		break ;
+
+		case b :
+			h = (60 * ((g - r) / diff)) + 60 ;
+		break ;
+	}
+
+	var s = max == 0 ? 0 : diff / max ;
+	var v = max ;
+    
+    h = Math.round(h);
+    s = Math.round(s*100);
+    v = Math.round(v*100)
+
+	return [ h, s, v ] ;
 }
